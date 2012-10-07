@@ -23,6 +23,8 @@ import org.lwjgl.opengl.DisplayMode;
 
 public class PhysicsModel {
 	
+	public final double G = 6.67E-11; 
+	
 	public static void main(String[] args) {
 		PhysicsModel physicsModel = new PhysicsModel();
 	}
@@ -47,6 +49,9 @@ public class PhysicsModel {
 		glOrtho(0, 800, 0, 600, 1, -1);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
+		
+		System.out.println(Gravity.getForce(80, 5.972E24, 6378100, G));
+		System.out.println(5.972e24 * 9.8);
 		
 		while(!Display.isCloseRequested()) {
 			
