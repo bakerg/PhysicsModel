@@ -48,7 +48,7 @@ public class PhysicsModel {
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		
-		System.out.println(Gravity.getForce(80, 5.972E24, 6378100));
+		System.out.println(Gravity.getForce(80, 5.972E24, 6378101));
 		
 		
 		while(!Display.isCloseRequested()) {
