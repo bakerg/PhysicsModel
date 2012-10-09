@@ -6,8 +6,8 @@ public class Enums {
 	public enum Materials {
 		IRON
 	}
-	public Material getMaterial() {
-		switch(materials) {
+	public static Material getMaterial(Materials material) {
+		switch(material) {
 		case IRON:
 			return new MaterialIron();
 		default:

@@ -52,7 +52,7 @@ public class PhysicsModel {
 		
 		
 		while(!Display.isCloseRequested()) {
-			
+			EventHandler.pollInput();
 			Display.update();
 			Display.sync(60);
 		}
