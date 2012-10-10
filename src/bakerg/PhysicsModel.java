@@ -16,6 +16,7 @@ import static org.lwjgl.opengl.GL11.glLoadIdentity;
 import static org.lwjgl.opengl.GL11.glMatrixMode;
 import static org.lwjgl.opengl.GL11.glOrtho;
 import static org.lwjgl.opengl.GL11.glShadeModel;
+import static org.lwjgl.opengl.GL11.*;
 
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
@@ -52,6 +53,15 @@ public class PhysicsModel {
 		
 		
 		while(!Display.isCloseRequested()) {
+			
+			glColor3f(1,1,1);
+			
+			for(Particle i : ParticleController.particles) {
+				glBegin(GL_POINTS);
+					glVertex2d((i.x)/100, (i.y)/100);
+				glEnd();
+			}
+			
 			EventHandler.pollInput();
 			Display.update();
 			Display.sync(60);

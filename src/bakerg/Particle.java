@@ -6,8 +6,10 @@ public class Particle {
 	private double bearing;
 	private double radius;
 	private double density;
-	public Particle(Material material) {
+	public Particle(Material material, double x, double y) {
 		density = material.getDensity();
+		this.x = x;
+		this.y = y;
 	}
 	public void setRadius(double r) { //manually set the radius
 		radius = r;
