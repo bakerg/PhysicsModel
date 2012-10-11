@@ -6,8 +6,10 @@ public class Particle {
 	private double bearing;
 	private double radius;
 	private double density;
-	public Particle(Material material, double x, double y) {
-		density = material.getDensity();
+	private double thermoconductance;
+	public Particle(double density, double thermoconductance, double x, double y) {
+		this.density = density;
+		this.thermoconductance = thermoconductance;
 		this.x = x;
 		this.y = y;
 	}
