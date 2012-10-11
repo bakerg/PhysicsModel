@@ -58,7 +58,7 @@ public class PhysicsModel {
 			
 			for(Particle i : ParticleController.particles) {
 				glBegin(GL_POINTS);
-					glVertex2d((i.x)/100, (i.y)/100);
+					glVertex2d((i.x), (i.y));
 				glEnd();
 			}
 			

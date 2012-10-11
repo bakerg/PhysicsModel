@@ -3,10 +3,12 @@ package bakerg;
 public enum MaterialsEnum {
 	
 	IRON(10,20,"iron"),
-	HYDROGEN(1,5,"hydrogen");
+	HYDROGEN(1,5,"hydrogen"),
+	BLACKHOLE(1000, 0, "blackhole"),
+	COPPER(8, 40, "copper");
 	
 	public double density,
-			   theromoconductance;
+			      theromoconductance;
 	public String tag;
 	
 	private MaterialsEnum(int density, int thermoconductance, String tag) {
